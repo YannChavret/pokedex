@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
   </head>
+  
   <body>
+    <form id="reservation" name="reservation" method="post">
+      <div>
+      <label for="select"></label>
+      <input id="search" type="text" name="" placeholder="Nom du pokemon" list="selectOne">
+      <p id="showinputhere"></p>
+      <datalist name="" id="selectOne"></datalist>
+      <button type="button" value="Envoyer" onclick="getValue()">Envoyer</button>
+      </div>
+  </form>
     <h1>
       Salamèche
       <span>#0004</span>
@@ -17,9 +27,9 @@
       <section id="infos" class="flex">
         <div class="w-50">
           <div class="text-center">
-            <img class="w-100 object-fit-cover" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Salamèche">
+            <img class="imgHero w-100 object-fit-cover" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Salamèche">
           </div>
-          <div class="stats hp-3 att-4 def-3 spe-att-4 spe-def-3 speed-4">
+          <div class="stats">
             <h3>Stats</h3>
             <div>
               <div></div>
@@ -127,15 +137,15 @@
           </div>
         </div>
         <div class="w-50">
-          <p>Il a une préférence pour les choses chaudes. Quand il pleut, on dit que de la vapeur jaillit du bout de sa queue.</p>
+          <p class="description">Il a une préférence pour les choses chaudes. Quand il pleut, on dit que de la vapeur jaillit du bout de sa queue.</p>
           <ul class="specifications">
             <li>
               <span>Taille</span>
-              <strong>2' 00"</strong>
+              <strong class="height">2' 00"</strong>
             </li>
             <li>
               <span>Categorie</span>
-              <strong>Lézard</strong>
+              <strong class="category">Lézard</strong>
             </li>
             <li>
               <span>Poids</span>
@@ -143,25 +153,28 @@
             </li>
             <li>
               <span>Capacité</span>
-              <strong>Flamme</strong>
+              <strong class="capacity">Flamme</strong>
             </li>
             <li>
               <span>Genre</span>
               <strong>
                 <i class="bi bi-gender-female"></i>
                 <i class="bi bi-gender-male"></i>
+                <p class="unknown">Inconnu</p>
               </strong>
             </li>
           </ul>
+
           <h3>Type</h3>
           <ul class="type-list">
-            <li>
+            <!-- <li>
               <button class="fire">Feu</button>
-            </li>
+            </li> -->
           </ul>
+
           <h3>Faiblesses</h3>
-          <ul class="type-list">
-            <li>
+          <ul class="type-list" id="weaknesses">
+            <!-- <li>
               <button class="water">Eau</button>
             </li>
             <li>
@@ -169,7 +182,7 @@
             </li>
             <li>
               <button class="rock">Pierre</button>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>

@@ -23,6 +23,36 @@ body {
   margin-bottom: var(--margin-bottom);
 }
 
+#search {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 200;
+  top: 50%;
+  left: 50%;
+  border: none;
+  padding: 10px 20px;
+  margin: 0;
+  box-shadow: none;
+  color: black;
+  background: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: large;
+  background-size: 400% 400%;
+  animation: ButtonBg 10s ease infinite;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 200;
+  top: 50%;
+  left: 50%;
+  border: none;
+  padding: 10px 20px;
+}
+
 h1, h2, h3 {
   font-family: 'Exo', sans-serif;
 }
@@ -120,7 +150,7 @@ ul.type-list {
   color: white;
 }
 
-.fly {
+.flying {
   background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
   color: white;
 }
@@ -129,6 +159,38 @@ ul.type-list {
   background-color: #4592c4;
   color: white;
 }
+
+.poison {
+  background-color: #b97fc9;
+  color: white;
+}
+
+.grass {
+  background-color: #9bcc50;
+  color: white;
+}
+
+.bug {
+  background-color: #729f3f;
+  color: white;
+}
+
+.electric {
+  background-color: #eed535;
+  color: white;
+}
+
+.normal {
+  background-color: #a4acaf;
+  color: white;
+}
+
+.ice {
+  background-color: #51c4e7;
+  color: white;
+}
+
+
 
 .ground {
   background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
@@ -193,69 +255,69 @@ ul.type-list {
 .stats.hp-14 > div > div:nth-of-type(1n + 2):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
 .stats.hp-15 > div > div:nth-of-type(1n + 1):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
 
-.stats.att-1 > div > div:nth-of-type(1n + 31):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-2 > div > div:nth-of-type(1n + 30):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-3 > div > div:nth-of-type(1n + 29):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-4 > div > div:nth-of-type(1n + 28):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-5 > div > div:nth-of-type(1n + 27):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-6 > div > div:nth-of-type(1n + 26):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-7 > div > div:nth-of-type(1n + 25):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-8 > div > div:nth-of-type(1n + 24):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-9 > div > div:nth-of-type(1n + 23):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-10 > div > div:nth-of-type(1n + 22):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-11 > div > div:nth-of-type(1n + 21):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-12 > div > div:nth-of-type(1n + 20):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-13 > div > div:nth-of-type(1n + 19):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-14 > div > div:nth-of-type(1n + 18):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
-.stats.att-15 > div > div:nth-of-type(1n + 17):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-1 > div > div:nth-of-type(1n + 31):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-2 > div > div:nth-of-type(1n + 30):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-3 > div > div:nth-of-type(1n + 29):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-4 > div > div:nth-of-type(1n + 28):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-5 > div > div:nth-of-type(1n + 27):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-6 > div > div:nth-of-type(1n + 26):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-7 > div > div:nth-of-type(1n + 25):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-8 > div > div:nth-of-type(1n + 24):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-9 > div > div:nth-of-type(1n + 23):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-10 > div > div:nth-of-type(1n + 22):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-11 > div > div:nth-of-type(1n + 21):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-12 > div > div:nth-of-type(1n + 20):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-13 > div > div:nth-of-type(1n + 19):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-14 > div > div:nth-of-type(1n + 18):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-15 > div > div:nth-of-type(1n + 17):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
 
-.stats.def-1 > div > div:nth-of-type(1n + 47):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-2 > div > div:nth-of-type(1n + 46):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-3 > div > div:nth-of-type(1n + 45):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-4 > div > div:nth-of-type(1n + 44):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-5 > div > div:nth-of-type(1n + 43):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-6 > div > div:nth-of-type(1n + 42):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-7 > div > div:nth-of-type(1n + 41):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-8 > div > div:nth-of-type(1n + 40):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-9 > div > div:nth-of-type(1n + 39):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-10 > div > div:nth-of-type(1n + 38):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-11 > div > div:nth-of-type(1n + 37):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-12 > div > div:nth-of-type(1n + 36):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-13 > div > div:nth-of-type(1n + 35):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-14 > div > div:nth-of-type(1n + 34):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
-.stats.def-15 > div > div:nth-of-type(1n + 33):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-1 > div > div:nth-of-type(1n + 47):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-2 > div > div:nth-of-type(1n + 46):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-3 > div > div:nth-of-type(1n + 45):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-4 > div > div:nth-of-type(1n + 44):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-5 > div > div:nth-of-type(1n + 43):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-6 > div > div:nth-of-type(1n + 42):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-7 > div > div:nth-of-type(1n + 41):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-8 > div > div:nth-of-type(1n + 40):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-9 > div > div:nth-of-type(1n + 39):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-10 > div > div:nth-of-type(1n + 38):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-11 > div > div:nth-of-type(1n + 37):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-12 > div > div:nth-of-type(1n + 36):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-13 > div > div:nth-of-type(1n + 35):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-14 > div > div:nth-of-type(1n + 34):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-15 > div > div:nth-of-type(1n + 33):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
 
-.stats.spe-att-1 > div > div:nth-of-type(1n + 63):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-2 > div > div:nth-of-type(1n + 62):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-3 > div > div:nth-of-type(1n + 61):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-4 > div > div:nth-of-type(1n + 60):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-5 > div > div:nth-of-type(1n + 59):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-6 > div > div:nth-of-type(1n + 58):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-7 > div > div:nth-of-type(1n + 57):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-8 > div > div:nth-of-type(1n + 56):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-9 > div > div:nth-of-type(1n + 55):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-10 > div > div:nth-of-type(1n + 54):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-11 > div > div:nth-of-type(1n + 53):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-12 > div > div:nth-of-type(1n + 52):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-13 > div > div:nth-of-type(1n + 51):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-14 > div > div:nth-of-type(1n + 50):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
-.stats.spe-att-15 > div > div:nth-of-type(1n + 49):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-1 > div > div:nth-of-type(1n + 63):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-2 > div > div:nth-of-type(1n + 62):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-3 > div > div:nth-of-type(1n + 61):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-4 > div > div:nth-of-type(1n + 60):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-5 > div > div:nth-of-type(1n + 59):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-6 > div > div:nth-of-type(1n + 58):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-7 > div > div:nth-of-type(1n + 57):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-8 > div > div:nth-of-type(1n + 56):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-9 > div > div:nth-of-type(1n + 55):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-10 > div > div:nth-of-type(1n + 54):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-11 > div > div:nth-of-type(1n + 53):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-12 > div > div:nth-of-type(1n + 52):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-13 > div > div:nth-of-type(1n + 51):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-14 > div > div:nth-of-type(1n + 50):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-15 > div > div:nth-of-type(1n + 49):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
 
-.stats.spe-def-1 > div > div:nth-of-type(1n + 79):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-2 > div > div:nth-of-type(1n + 78):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-3 > div > div:nth-of-type(1n + 77):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-4 > div > div:nth-of-type(1n + 76):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-5 > div > div:nth-of-type(1n + 75):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-6 > div > div:nth-of-type(1n + 74):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-7 > div > div:nth-of-type(1n + 73):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-8 > div > div:nth-of-type(1n + 72):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-9 > div > div:nth-of-type(1n + 71):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-10 > div > div:nth-of-type(1n + 70):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-11 > div > div:nth-of-type(1n + 69):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-12 > div > div:nth-of-type(1n + 68):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-13 > div > div:nth-of-type(1n + 67):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-14 > div > div:nth-of-type(1n + 66):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
-.stats.spe-def-15 > div > div:nth-of-type(1n + 65):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-1 > div > div:nth-of-type(1n + 79):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-2 > div > div:nth-of-type(1n + 78):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-3 > div > div:nth-of-type(1n + 77):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-4 > div > div:nth-of-type(1n + 76):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-5 > div > div:nth-of-type(1n + 75):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-6 > div > div:nth-of-type(1n + 74):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-7 > div > div:nth-of-type(1n + 73):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-8 > div > div:nth-of-type(1n + 72):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-9 > div > div:nth-of-type(1n + 71):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-10 > div > div:nth-of-type(1n + 70):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-11 > div > div:nth-of-type(1n + 69):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-12 > div > div:nth-of-type(1n + 68):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-13 > div > div:nth-of-type(1n + 67):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-14 > div > div:nth-of-type(1n + 66):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-15 > div > div:nth-of-type(1n + 65):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
 
 .stats.speed-1 > div > div:nth-of-type(1n + 95):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
 .stats.speed-2 > div > div:nth-of-type(1n + 94):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
