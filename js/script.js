@@ -77,9 +77,10 @@ function getValue() {
     /*----------------- Stats -----------------------*/
 
     const stats = document.querySelector(".stats");
+    stats.classList = "stats";
 
     for (const typeStats of data.stats) {
-      const baseStat = Math.round((typeStats.base_stat * 15) / 100);
+      const baseStat = Math.round((typeStats.base_stat * 15) / 283);
       console.log(baseStat);
       stats.classList.add(typeStats.stat.name + "-" + baseStat);
     }
@@ -110,6 +111,7 @@ function getValue() {
     /*---------------- Type --------------------*/
 
     const typeContainer = document.querySelector(".type-list");
+    typeContainer.innerHTML = "";
 
     for (const types of data.types) {
       const list = document.createElement("li");
@@ -152,6 +154,10 @@ function getValue() {
     const male = document.querySelector(".bi-gender-male");
     const unknown = document.querySelector(".unknown");
 
+    female.style.display = "block";
+    male.style.display = "block";
+    unknown.style.display = "block";
+
     switch (gender) {
       case -1:
         female.style.display = "none";
@@ -186,6 +192,9 @@ function getValue() {
     console.log(data);
 
     const weakness = document.querySelector("#weaknesses");
+    weakness.innerHTML = "";
+
+    // weakness.removeChild();
 
     for (const damages of data.damage_relations.double_damage_from) {
       const list = document.createElement("li");
@@ -197,7 +206,7 @@ function getValue() {
       list.appendChild(buttonType);
     }
   }
-  header("Refresh:0");
+
   // setInterval(() => {
   //   location.reload();
   // }, 10000);

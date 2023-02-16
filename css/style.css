@@ -414,3 +414,8 @@ ul.type-list {
     width: 100%;
   }
 }
+
+#reservation > div {
+  display: flex;
+  flex-direction: row;
+}
